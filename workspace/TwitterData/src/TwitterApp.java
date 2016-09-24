@@ -16,10 +16,10 @@ public class TwitterApp {
 		ConfigurationBuilder cb =  new ConfigurationBuilder();
 		
 		cb.setDebugEnabled(true)
-			.setOAuthConsumerKey("consume key")
-			.setOAuthConsumerSecret("secret")
+			.setOAuthConsumerKey("consumer key")
+			.setOAuthConsumerSecret("consume secret ")
 			.setOAuthAccessToken("access token")
-			.setOAuthAccessTokenSecret("toekn secret");
+			.setOAuthAccessTokenSecret("access token secret");
 		
 		TwitterFactory tf = new TwitterFactory(cb.build());
 		twitter4j.Twitter twitter = tf.getInstance();

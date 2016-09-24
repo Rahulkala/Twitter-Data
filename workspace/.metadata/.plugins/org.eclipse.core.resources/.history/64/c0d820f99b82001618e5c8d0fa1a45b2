@@ -1,0 +1,32 @@
+
+public class TweetsData 
+{
+	private String keyword;
+	private double latitude;
+	private double longitude;
+	private java.sql.Timestamp createdAt;
+	public java.sql.Timestamp getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(java.sql.Timestamp createdAt) {
+		this.createdAt = createdAt;
+	}
+	public double getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+	public double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+}

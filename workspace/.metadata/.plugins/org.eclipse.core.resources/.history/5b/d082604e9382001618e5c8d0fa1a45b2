@@ -1,0 +1,31 @@
+import twitter4j.Query;
+import twitter4j.QueryResult;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
+
+public class TweetinArea {
+
+	public static void main(String[] args) throws TwitterException {
+		// TODO Auto-generated method stub
+
+		ConfigurationBuilder cb =  new ConfigurationBuilder();
+		
+		cb.setDebugEnabled(true)
+			.setOAuthConsumerKey("17mWCKNJfJbObR6ht2JRChqw8")
+			.setOAuthConsumerSecret("ROVflH4Jm6DbuLahoNW6uTv3vIoYguEauH8TfQ7kmeXcG360fm")
+			.setOAuthAccessToken("709776084104044546-tvdWLmF3kGA4BpwFrqvHClARj3GaUhh")
+			.setOAuthAccessTokenSecret("lahk12z1Lwq4KB3Kq62EHnQTWiaRwlIZ0b8aIVPHpEjIT");
+		
+		TwitterFactory tf = new TwitterFactory(cb.build());
+		twitter4j.Twitter twitter = tf.getInstance();
+		
+		Query q = new Query("USA");
+		q.getGeocode();
+		
+		QueryResult result = twitter.search(q);
+		//System.out.println(result);
+		System.out.println("\n "+q);
+	}
+
+}
